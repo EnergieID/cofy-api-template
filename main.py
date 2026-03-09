@@ -23,15 +23,7 @@ from starlette.responses import JSONResponse
 # ---------------------------------------------------------------------------
 # token_verifier protects all module endpoints with a simple bearer token.
 # Map each token to a dict with at least a "name" key.
-cofy = CofyApi(
-    dependencies=[
-        Depends(
-            token_verifier(
-                {environ.get("ENERGY_ID_COFY_API_TOKEN"): {"name": "EnergyID"}}
-            )
-        )
-    ]
-)
+cofy = CofyApi(dependencies=[Depends(token_verifier({environ.get("ENERGY_ID_COFY_API_TOKEN"): {"name": "EnergyID"}}))])
 
 # ---------------------------------------------------------------------------
 # Modules – uncomment / add the ones you need
@@ -48,6 +40,7 @@ cofy = CofyApi(
 #        name="entsoe",
 #     )
 # )
+
 
 # ---------------------------------------------------------------------------
 # Health check
