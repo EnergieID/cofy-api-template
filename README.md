@@ -40,17 +40,6 @@ poe dev          # starts FastAPI with auto-reload, reads .env
 The API is now available at `http://localhost:8000`.
 Health-check: `GET /health`
 
-### 5. Add database or worker (optional)
-If you need persistence or background jobs, see the `db.py` and `worker.py` scaffolds below for easy setup.
-Full documentation on these features is available in the [cofy-api README](https://github.com/EnergieID/cofy-api).
-
-Run them using:
-
-```bash
-poe db migrate    # run pending migrations
-poe worker       # start the worker
-```
-
 ## Development
 
 ### Code quality (pre-commit)

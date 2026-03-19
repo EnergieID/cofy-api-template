@@ -9,9 +9,9 @@ description = "A Cofy API instance" # Add a short description of your project he
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    # Add the extras you need: [tariff], [production], [db], [worker]
-    # e.g. "cofy-api[tariff,db]>=0.2.0"
-    "cofy-api>=0.2.0",
+    # Add the extras you need: [tariff], [production]
+    # e.g. "cofy-api[tariff,production]>=0.2.0"
+    "cofy-api>=0.3.0",
 ]
 
 [dependency-groups]
@@ -23,14 +23,8 @@ dev = [
 lint = "ruff check --fix"
 format = "ruff format"
 check = "ty check"
-[tool.poe.tasks.worker]
-cmd = "saq worker.settings"
-envfile = ".env"
 [tool.poe.tasks.dev]
 cmd = "fastapi dev main.py"
-envfile = ".env"
-[tool.poe.tasks.db]
-cmd = "python db.py"
 envfile = ".env"
 [tool.ruff]
 line-length = 120
