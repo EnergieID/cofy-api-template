@@ -40,6 +40,15 @@ poe dev          # starts FastAPI with auto-reload, reads .env
 The API is now available at `http://localhost:8000`.
 Health-check: `GET /health`
 
+### 5. Run a production-like container locally
+
+```bash
+poe prod         # builds the Docker image and runs it on port 8080
+```
+
+The container is available at `http://localhost:8080`.
+Health-check: `GET /health`
+
 ## Development
 
 ### Code quality (pre-commit)
@@ -59,16 +68,6 @@ Every commit will automatically run:
 | **ty** | Type checking | `poe check` |
 
 You can also run them manually at any time.
-
-## Docker
-
-```bash
-docker build -t cofy-api .
-docker run -p 8080:8080 --env-file .env cofy-api
-```
-
-The container listens on the port specified by the `PORT` environment variable
-(defaults to `8080`).
 
 ## License
 
