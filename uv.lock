@@ -67,16 +67,16 @@ wheels = [
 
 [[package]]
 name = "cofy-api"
-version = "0.3.1"
+version = "0.3.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
     { name = "pydantic" },
     { name = "starlette" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/87/1e/67bad9c28ca9d16d83434cd1dcbed787c8a683db24a577252d490eedeedf/cofy_api-0.3.1.tar.gz", hash = "sha256:d97a088eec282da4dc241b77ed078d9a14e8ed561b85adcba07966ea969287e5", size = 16093, upload-time = "2026-03-19T15:05:37.936Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/bb/a5/659d34f9535b2b54ea2812c9e94947514c3a1a2fa1859fbfc42e65bd1b74/cofy_api-0.3.2.tar.gz", hash = "sha256:0586bd3cb8887ff245d7ce23ca3f275a9b8b101763b814f425cb46ab5f29e24c", size = 16126, upload-time = "2026-03-23T09:02:40.837Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/44/2a/0005760edfd915ad7586c7b0428fb19e3d17f482c990a3d013a8257f9a27/cofy_api-0.3.1-py3-none-any.whl", hash = "sha256:6b3570ecfbac09953ed15bacf947fa3f5ccb78534b8fb5e305a3a65272dbfc12", size = 21622, upload-time = "2026-03-19T15:05:38.946Z" },
+    { url = "https://files.pythonhosted.org/packages/10/b0/d06632129f0d0625ddc68ce35687d8c720d147d2491d8d89a4a7f959f5ed/cofy_api-0.3.2-py3-none-any.whl", hash = "sha256:723ed696e4015f255d99ce63c3aa4108ca6860f3a85d6ffe5cafc85a314b3eeb", size = 21656, upload-time = "2026-03-23T09:02:39.577Z" },
 ]
 
 [[package]]
@@ -94,7 +94,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "cofy-api", specifier = ">=0.3.0" }]
+requires-dist = [{ name = "cofy-api", specifier = ">=0.3.2" }]
 
 [package.metadata.requires-dev]
 dev = [

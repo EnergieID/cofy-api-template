@@ -15,8 +15,6 @@ from os import environ
 from cofy import CofyApi
 from cofy.api import token_verifier
 from fastapi import Depends
-from starlette.requests import Request
-from starlette.responses import JSONResponse
 
 # ---------------------------------------------------------------------------
 # App
@@ -40,13 +38,3 @@ cofy = CofyApi(dependencies=[Depends(token_verifier({environ.get("ENERGY_ID_COFY
 #        name="entsoe",
 #     )
 # )
-
-
-# ---------------------------------------------------------------------------
-# Health check
-# ---------------------------------------------------------------------------
-async def health(request: Request) -> JSONResponse:
-    return JSONResponse({"status": "ok"})
-
-
-cofy.add_route("/health", health, methods=["GET"])

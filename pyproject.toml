@@ -11,7 +11,7 @@ requires-python = ">=3.12"
 dependencies = [
     # Add the extras you need: [tariff], [production]
     # e.g. "cofy-api[tariff,production]>=0.2.0"
-    "cofy-api>=0.3.0",
+    "cofy-api>=0.3.2",
 ]
 
 [dependency-groups]
