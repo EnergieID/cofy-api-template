@@ -12,7 +12,7 @@ Quick start:
 
 from os import environ
 
-from cofy import CofyApi
+from cofy import CofyAPI
 from cofy.api import token_verifier
 from fastapi import Depends
 
@@ -21,7 +21,7 @@ from fastapi import Depends
 # ---------------------------------------------------------------------------
 # token_verifier protects all module endpoints with a simple bearer token.
 # Map each token to a dict with at least a "name" key.
-cofy = CofyApi(dependencies=[Depends(token_verifier({environ.get("ENERGY_ID_COFY_API_TOKEN"): {"name": "EnergyID"}}))])
+cofy = CofyAPI(dependencies=[Depends(token_verifier({environ.get("ENERGY_ID_COFY_API_TOKEN"): {"name": "EnergyID"}}))])
 
 # ---------------------------------------------------------------------------
 # Modules – uncomment / add the ones you need
