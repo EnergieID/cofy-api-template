@@ -17,7 +17,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ruff>=0.15.10",
-    "ty>=0.0.12",
+    "ty>=0.0.31",
 ]
 [tool.poe.tasks]
 lint = "ruff check --fix"
